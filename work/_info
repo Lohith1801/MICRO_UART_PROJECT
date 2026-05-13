@@ -9,46 +9,67 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT
 vBaud
-Z1 !s110 1778647746
+!s110 1778655021
 !i10b 1
 !s100 zRQS:1iLfM?`jdLO9`edI0
 I9bg@bc0D1TDE:XY[Ke=^O3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1778647730
 8Baud.v
 FBaud.v
 L0 1
-Z3 OE;L;10.6c;65
+Z2 OE;L;10.6c;65
 r1
 !s85 0
 31
-Z4 !s108 1778647746.000000
-!s107 TX.v|Baud.v|
-Z5 !s90 Baud.v|TX.v|
+!s108 1778655021.000000
+!s107 Baud.v|
+!s90 Baud.v|
 !i113 0
-Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 tCvgOpt 0
+Z3 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z4 tCvgOpt 0
 n@baud
-vTX
+vsync
+Z5 !s110 1778655009
+!i10b 1
+!s100 UYedDn8^=Ll_zJ_?TWL_[1
+INOeJ?dEO]e1EIfX<Q@@XD2
 R1
+R0
+w1778654977
+8Sync.v
+FSync.v
+L0 1
+R2
+r1
+!s85 0
+31
+Z6 !s108 1778655009.000000
+Z7 !s107 TX.v|Sync.v|
+Z8 !s90 Sync.v|TX.v|
+!i113 0
+R3
+R4
+vTX
+R5
 !i10b 1
 !s100 ]MIeXWA2Fz37zPY90CEI42
 Izd7LiX6L2J;ai1>OZ_N=<0
-R2
+R1
 R0
 w1778585355
 8TX.v
 FTX.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R4
-Z8 !s107 TX.v|Baud.v|
-R5
-!i113 0
 R6
 R7
+R8
+!i113 0
+R3
+R4
 n@t@x
