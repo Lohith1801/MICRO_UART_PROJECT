@@ -35,9 +35,9 @@ reg [1:0] cur, nxt;
 
 
 
-always @(posedge baud_clk or posedge sys_rst_l) begin
+  always @(posedge baud_clk or negedge sys_rst_l) begin
 
-    if(!sys_rst_l) begin
+  if(!sys_rst_l) begin
 
         rec_dataH <= 0;
 
@@ -73,6 +73,7 @@ always @(posedge baud_clk or posedge sys_rst_l) begin
                     count <= 0;
                 else
                     count <= count + 1;
+              	rec_dataH <= 0;
 
             end
 
@@ -150,9 +151,9 @@ end
 
 
 assign rec_readyH =
-  ((cur == stop_bit) && (i == 0));
+  ((cur == stop_bit) && (i == 0))&&(sys_rst_l ==1);
 
 assign rec_busy =
-       ((cur == start_bit) || (cur == data_bit));
+  ((cur == start_bit) || (cur == data_bit))&&(sys_rst_l ==1);
 
 endmodule
