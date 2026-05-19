@@ -1,4 +1,8 @@
-`include"Sync.v"
+
+`timescale 1ns / 1ps
+
+`include"sync.v"
+
 module RX #(parameter WORD = 8)(
     input uart_REC_dataH,
     input baud_clk,
@@ -41,20 +45,20 @@ sync s1(.baud_clk(baud_clk), .sys_rst_l(sys_rst_l), .uart_REC_dataH(uart_REC_dat
                             i =0;
                         end
             data_bit : begin
-                            if(count == 6) begin
-                                rec_dataH = {rec_dataH[WORD-2:0],sync_uart_REC_data_H};
+              if(count == 7) begin
+                rec_dataH[i] = sync_uart_REC_data_H;
                                 i = i+1;
                             end
-                            else if(count >=16) begin
+              else if(count >=16) begin
                                 count =0;
                             end
                             
-                            nxt = (i==WORD)&&(sync_uart_REC_data_H == 1) ?  stop_bit :data_bit;
+              nxt = (i==WORD)&&(sync_uart_REC_data_H == 1) ?  stop_bit :data_bit;
                         end
+          	default : nxt = stop_bit;
           endcase
      end
   assign rec_readyH = (sync_uart_REC_data_H == 1)&&(i==WORD);
   assign rec_busy = (nxt == start_bit) || (nxt == data_bit);                                        
       
 endmodule
-
