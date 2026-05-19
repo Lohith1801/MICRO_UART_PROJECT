@@ -126,5 +126,6 @@ module TX #(parameter WORD = 8)(
         endcase
 
     end
-
+	assign xmit_doneH = (cur == ideal);
+	assign xmit_active = (cur != ideal);
 endmodule
