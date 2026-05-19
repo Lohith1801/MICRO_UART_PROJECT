@@ -117,7 +117,7 @@ always @(*) begin
 
         stop_bit: begin
 
-            nxt = (sync_uart_REC_data_H == 0) ?
+          nxt = (sync_uart_REC_data_H == 0)&&(rec_readyH == 1) ?
                    start_bit : stop_bit;
 
         end
