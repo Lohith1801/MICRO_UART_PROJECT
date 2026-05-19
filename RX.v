@@ -24,7 +24,7 @@ sync s1(
 
 reg [4:0] count;
 reg [3:0] i;
-
+  reg [WORD-1:0]stored_out;
 reg [31:0] cnt;
 
 localparam start_bit = 0,
@@ -40,7 +40,7 @@ reg [1:0] cur, nxt;
   if(!sys_rst_l) begin
 
         rec_dataH <= 0;
-
+		stored_out <=0;
         cur <= stop_bit;
 
         count <= 0;
@@ -59,7 +59,7 @@ reg [1:0] cur, nxt;
         case(cur)
 
             stop_bit: begin
-
+				rec_dataH <= stored_out;
                 count <= 0;
                 i <= 0;
 
@@ -73,7 +73,7 @@ reg [1:0] cur, nxt;
                     count <= 0;
                 else
                     count <= count + 1;
-              	rec_dataH <= 0;
+              	stored_out <= 0;
 
             end
 
@@ -85,7 +85,7 @@ reg [1:0] cur, nxt;
 
                     count <= 0;
 
-                    if(i < WORD-1)
+                    if(i < WORD)
                         i <= i + 1;
 
                 end
@@ -97,7 +97,7 @@ reg [1:0] cur, nxt;
 
 
                 if(count == 7)
-                    rec_dataH[i] <= sync_uart_REC_data_H;
+                    stored_out[i] <= sync_uart_REC_data_H;
 
             end
 
@@ -116,7 +116,7 @@ always @(*) begin
     case(cur)
 
         stop_bit: begin
-
+		  	
           nxt = (sync_uart_REC_data_H == 0)&&(rec_readyH == 1) ?
                    start_bit : stop_bit;
 
@@ -139,13 +139,10 @@ always @(*) begin
 
         data_bit: begin
 
-            nxt = ((count == 15) && (i == WORD-1)) ?
+          nxt = ((count == 15) && (i == WORD))&&(sync_uart_REC_data_H == 1) ?
                    stop_bit : data_bit;
 
         end
-
-
-
         default: nxt = stop_bit;
 
     endcase
