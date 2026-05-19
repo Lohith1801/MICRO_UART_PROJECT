@@ -125,9 +125,13 @@ always @(*) begin
 
 
         start_bit: begin
-
-            nxt = (count == 15) ?
-                   data_bit : start_bit;
+          if(sync_uart_REC_data_H == 0) begin
+            nxt = (count == 15) ?data_bit : start_bit;
+          end
+          else begin
+            count = 0;
+            nxt = stop_bit;
+          end
 
         end
 
