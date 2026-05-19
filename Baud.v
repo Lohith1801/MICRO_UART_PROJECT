@@ -13,7 +13,7 @@ module Baud #(
 
     always @(posedge sys_clk or posedge sys_rst_l) begin
 
-        if(sys_rst_l) begin
+        if(!sys_rst_l) begin
             baud_clk <= 0;
             count <= 0;
         end

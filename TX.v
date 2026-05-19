@@ -24,7 +24,7 @@ module TX #(parameter WORD = 8)(
 
     always @(posedge baud_clk or posedge sys_rst_l) begin
 
-        if(sys_rst_l) begin
+        if(!sys_rst_l) begin
             cur   <= idle;
             count <= 0;
             i     <= 0;
