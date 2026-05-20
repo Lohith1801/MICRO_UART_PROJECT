@@ -1,5 +1,7 @@
 `include "inc.h"
-
+`include "baud.v"
+`include "u_rec.v"
+`include "u_xmit.v"
 module uart #(parameter freq=`freq, baudr=`baudr, width=`width)(
 input sys_clk,
 input sys_rst,
