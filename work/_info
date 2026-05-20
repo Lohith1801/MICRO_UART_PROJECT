@@ -9,67 +9,111 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT
 vBaud
-!s110 1778655021
+Z1 !s110 1779260968
 !i10b 1
-!s100 zRQS:1iLfM?`jdLO9`edI0
-I9bg@bc0D1TDE:XY[Ke=^O3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 2UN3TJT1zd09a?h::4_Um0
+I<od=MaW`<[K3_ljYC]<Y^2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1778647730
+w1779183514
 8Baud.v
 FBaud.v
 L0 1
-Z2 OE;L;10.6c;65
+Z3 OE;L;10.6c;65
 r1
 !s85 0
 31
-!s108 1778655021.000000
-!s107 Baud.v|
-!s90 Baud.v|
+Z4 !s108 1779260967.000000
+!s107 micro_UART.v|Baud.v|TX.v|Sync.v|RX.v|
+Z5 !s90 RX.v|Sync.v|TX.v|Baud.v|micro_UART.v|
 !i113 0
-Z3 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z4 tCvgOpt 0
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
 n@baud
-vsync
-Z5 !s110 1778655009
-!i10b 1
-!s100 UYedDn8^=Ll_zJ_?TWL_[1
-INOeJ?dEO]e1EIfX<Q@@XD2
+vRX
 R1
+!i10b 1
+!s100 ;_fBTlaFKRSVef>R>=neb1
+IY>aa3mobSEiQ9NgPm]>2M0
+R2
 R0
-w1778654977
+w1779260965
+8RX.v
+FRX.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+Z8 !s107 micro_UART.v|Baud.v|TX.v|Sync.v|RX.v|
+R5
+!i113 0
+R6
+R7
+n@r@x
+vsync
+R1
+!i10b 1
+!s100 aF`dRSG:KI18JX@1<kBH<3
+IgLQkEgIXZbVzF`z7QG[EI3
+R2
+R0
+w1779171622
 8Sync.v
 FSync.v
 L0 1
-R2
+R3
 r1
 !s85 0
 31
-Z6 !s108 1778655009.000000
-Z7 !s107 TX.v|Sync.v|
-Z8 !s90 Sync.v|TX.v|
-!i113 0
-R3
 R4
-vTX
+R8
 R5
-!i10b 1
-!s100 ]MIeXWA2Fz37zPY90CEI42
-Izd7LiX6L2J;ai1>OZ_N=<0
+!i113 0
+R6
+R7
+vTX
 R1
+!i10b 1
+!s100 8NOQomME<o5Hk1PJeo:a?1
+IePzl2G7mW[eiOE<6do:M01
+R2
 R0
-w1778585355
+w1779260501
 8TX.v
 FTX.v
 L0 3
-R2
+R3
 r1
 !s85 0
 31
+R4
+R8
+R5
+!i113 0
 R6
 R7
-R8
-!i113 0
-R3
-R4
 n@t@x
+vUART_LOOPBACK
+R1
+!i10b 1
+!s100 Wf_=Yc?;4O3I6=6Qo8c<]0
+I@NI9TV3IMo;^a5mcW3H?i0
+R2
+R0
+w1779260907
+8micro_UART.v
+Fmicro_UART.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R8
+R5
+!i113 0
+R6
+R7
+n@u@a@r@t_@l@o@o@p@b@a@c@k

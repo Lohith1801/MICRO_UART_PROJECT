@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-`include "sync.v"
 
 module RX #(parameter WORD = 8)(
     input uart_REC_dataH,

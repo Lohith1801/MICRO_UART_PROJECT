@@ -1,10 +1,5 @@
 `timescale 1ns / 1ps
 
-`include "Baud.v"
-`include "TX.v"
-`include "RX.v"
-`include "Sync.v"
-
 module UART_LOOPBACK #(
     parameter WORD = 8,
     parameter CLK_FREQ = 50000000,
@@ -25,7 +20,7 @@ module UART_LOOPBACK #(
     output xmit_doneH
 );
 
-    wire baud_clk,uart_REC_dataH;
+    wire baud_clk;
 
     Baud #(
         .CLK_FREQ(CLK_FREQ),
@@ -52,7 +47,6 @@ module UART_LOOPBACK #(
     RX #(
         .WORD(WORD)
     ) R1 (
-        .rec_dataH(rec_dataH),
         .baud_clk(baud_clk),
         .sys_rst_l(sys_rst_l),
 

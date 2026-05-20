@@ -9,7 +9,7 @@ module TX #(parameter WORD = 8)(
 
     output reg uart_REC_dataH,
     output reg xmit_active,
-    output reg xmit_doneH
+    output  reg xmit_doneH
 );
 
     reg [WORD-1:0] data;
@@ -112,6 +112,7 @@ module TX #(parameter WORD = 8)(
             end
 
             stop_bit: begin
+                
                 uart_REC_dataH = 1'b1;
                 xmit_active = 1'b1;
                 if(count == 15) begin
@@ -126,6 +127,4 @@ module TX #(parameter WORD = 8)(
         endcase
 
     end
-	assign xmit_doneH = (cur == ideal);
-	assign xmit_active = (cur != ideal);
 endmodule
