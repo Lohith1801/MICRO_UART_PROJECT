@@ -7,4 +7,120 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT/msl
+Z0 d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT/msl
+T_opt
+!s110 1779267706
+VA82T1F3ILZJ7h@7h`R7zS3
+04 9 4 work uart_test fast 0
+=1-6805caf5892e-6a0d787a-1853-e359
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OE;O;10.6c;65
+R0
+vbaud
+Z2 !s110 1779267765
+!i10b 1
+!s100 h9CMSlA[eg;Iin[Q>U:n=1
+I9`IBW<gIc:CMFzEP;WUGb1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1779259917
+8baud.v
+Fbaud.v
+L0 3
+Z4 OE;L;10.6c;65
+r1
+!s85 0
+31
+Z5 !s108 1779267765.000000
+Z6 !s107 inc.h|baud.v|u_xmit.v|u_rec.v|uart.v|tb.v|
+Z7 !s90 tb.v|uart.v|u_rec.v|u_xmit.v|baud.v|inc.h|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vu_rec
+R2
+!i10b 1
+!s100 bo[gLi>@ZFaMIVR2hzlP91
+IK4Uzdh?M8b?@Ve9o1mnkV0
+R3
+R0
+w1779184610
+8u_rec.v
+Fu_rec.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1
+vu_xmit
+R2
+!i10b 1
+!s100 o8k=m36_WhEOLLf8NhC733
+I8=hlOFD;Q_nl?SK[zQGJS1
+R3
+R0
+w1779184520
+8u_xmit.v
+Fu_xmit.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1
+vuart
+!s110 1779267770
+!i10b 1
+!s100 2;56ikYA]UH0Vz>I_ZQg;2
+I7OlY52G5z87U_WUl>TQW`2
+R3
+R0
+w1779267457
+8uart.v
+Fuart.v
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1779267770.000000
+!s107 inc.h|uart.v|
+!s90 +acc|+cover|-l|log_file.log|uart.v|
+!i113 0
+!s102 +cover
+o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vuart_test
+R2
+!i10b 1
+!s100 Kbb52Rb1318M:]]d>IUL>2
+IGZ6S<MY^NHA?I>XmSVdc31
+R3
+R0
+w1779267684
+8tb.v
+Ftb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1

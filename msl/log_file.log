@@ -1,0 +1,9 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 14:32:50 on May 20,2026
+vlog "+acc" "+cover" -l log_file.log uart.v 
+-- Compiling module uart
+
+Top level modules:
+	uart
+End time: 14:32:50 on May 20,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

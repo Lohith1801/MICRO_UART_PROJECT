@@ -51,7 +51,6 @@ uart #(
     .xmit_h(xmit_h),
     .xmit_data_h(xmit_data_h),
     .uart_rec_data_h(uart_rec_data_h),
-    .uart_clk(uart_clk),
     .uart_xmit_data_h(uart_xmit_data_h),
     .xmit_done_h(xmit_done_h),
     .rec_data_h(rec_data_h),
@@ -243,7 +242,7 @@ task No_assertion_xmitH(input ID);
 begin
     tx_expected_data = tx_monitored_data;
     fork
-        tx_driver_xmitH_btw(tx_expected_data); 
+        tx_driver(tx_expected_data); 
         tx_monitor();
         tx_scr(ID);       
     join     
@@ -384,5 +383,6 @@ initial begin
         sending_two_pacs_continouosly(20);
         end_bit_not_recieved(21); 
     end
+	$finish;
  end       
 endmodule
