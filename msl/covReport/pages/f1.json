@@ -1,0 +1,76 @@
+var g_data = {
+f5:{
+scopes:[{link:'z.htm?f=0&s=5',val:'work.u_xmit'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg72',items:[{c:'Y',p:'83.33',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'340',c:'g'}
+,{cr:'c',z:'idle -> start',h:'100',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'1600',c:'g'}
+,{cr:'c',z:'start -> data',h:'100',c:'g'}
+,{cr:'m',z:'start -> idle',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'data',h:'12800',c:'g'}
+,{cr:'c',z:'data -> stop',h:'100',c:'g'}
+,{cr:'m',z:'data -> idle',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'stop',h:'1600',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'100',c:'g'}
+]}
+
+],
+},
+f52:{
+scopes:[{s:'7',b:'1',val:'uart_test'},{s:'8',b:'1',val:'DUT'},{link:'z.htm?f=0&s=52',val:'b2'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg72',items:[{c:'Y',p:'83.33',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'340',c:'g'}
+,{cr:'c',z:'idle -> start',h:'100',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'1600',c:'g'}
+,{cr:'c',z:'start -> data',h:'100',c:'g'}
+,{cr:'m',z:'start -> idle',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'data',h:'12800',c:'g'}
+,{cr:'c',z:'data -> stop',h:'100',c:'g'}
+,{cr:'m',z:'data -> idle',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'stop',h:'1600',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'100',c:'g'}
+]}
+
+],
+},
+f6:{
+scopes:[{link:'z.htm?f=0&s=6',val:'work.u_rec'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg139',items:[{c:'Y',p:'83.33',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'24300',c:'g'}
+,{cr:'c',z:'idle -> start',h:'160',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'1280',c:'g'}
+,{cr:'m',z:'start -> idle',h:'0',c:'r'}
+,{cr:'c',z:'start -> data',h:'160',c:'g'}
+,{cr:'c',s:'1',z:'data',h:'20320',c:'g'}
+,{cr:'c',z:'data -> stop',h:'160',c:'g'}
+,{cr:'m',z:'data -> idle',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'stop',h:'2560',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'160',c:'g'}
+]}
+
+],
+},
+f116:{
+scopes:[{s:'7',b:'1',val:'uart_test'},{s:'8',b:'1',val:'DUT'},{link:'z.htm?f=0&s=116',val:'b3'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg139',items:[{c:'Y',p:'83.33',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'24300',c:'g'}
+,{cr:'c',z:'idle -> start',h:'160',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'1280',c:'g'}
+,{cr:'m',z:'start -> idle',h:'0',c:'r'}
+,{cr:'c',z:'start -> data',h:'160',c:'g'}
+,{cr:'c',s:'1',z:'data',h:'20320',c:'g'}
+,{cr:'c',z:'data -> stop',h:'160',c:'g'}
+,{cr:'m',z:'data -> idle',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'stop',h:'2560',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'160',c:'g'}
+]}
+
+],
+},
+dummyEnd:0
+};
+processFsmData(g_data);

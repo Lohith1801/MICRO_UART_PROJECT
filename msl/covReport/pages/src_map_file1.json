@@ -1,0 +1,6 @@
+var g_data = {'dummy':null,
+'1':'baud.v',
+'5':'tb.v',
+'4':'u_rec.v',
+'3':'u_xmit.v',
+'2':'uart.v'};

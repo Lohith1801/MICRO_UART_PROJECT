@@ -404,7 +404,7 @@ initial begin
     $display(" Total Pass: %0d", pass_count);
     $display(" Total Fail:  %0d", fail_count);
   
-  $display(" PASS percentage:  %0.2f %", pass_percentage);
+  $display(" PASS percentage:  %0.2f percentage", pass_percentage);
     $display("=================================================\n");
     $finish;
 end

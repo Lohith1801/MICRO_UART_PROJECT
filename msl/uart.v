@@ -14,7 +14,6 @@ module uart #(
     input [width-1:0] xmit_data_h,
     input uart_rec_data_h,
 
-    output uart_clk,
     output uart_xmit_data_h,
     output xmit_done_h,
     output [width-1:0] rec_data_h,

@@ -9,19 +9,19 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT/msl
 T_opt
-!s110 1779269544
-VNND=NSoacJE?1^Hlj>5650
+!s110 1779322873
+Vf=mPR@[@oT78`<]c0coLn3
 04 9 4 work uart_test fast 0
-=1-6805caf5892e-6a0d7fa8-72d6f-1678e
+=1-6805caf5892e-6a0e4ff9-a5f0b-2d9e1
 o-quiet -auto_acc_if_foreign -work work
 Z1 tCvgOpt 0
 n@_opt
 OE;O;10.6c;65
 vbaud
-Z2 !s110 1779269524
+Z2 !s110 1779322842
 !i10b 1
-!s100 h9CMSlA[eg;Iin[Q>U:n=1
-I9`IBW<gIc:CMFzEP;WUGb1
+!s100 zPh48JdO1J`0P_f8M3Y]n1
+I;c=O=^3;b7:Ik2?TF?jb30
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1779259917
@@ -32,17 +32,18 @@ Z4 OE;L;10.6c;65
 r1
 !s85 0
 31
-Z5 !s108 1779269524.000000
-Z6 !s107 inc.h|baud.v|u_xmit.v|u_rec.v|uart.v|tb.v|
-Z7 !s90 tb.v|uart.v|u_rec.v|u_xmit.v|baud.v|inc.h|
+Z5 !s108 1779322842.000000
+Z6 !s107 u_xmit.v|u_rec.v|baud.v|inc.h|uart.v|
+Z7 !s90 +acc|+cover|-l|log_file.log|uart.v|
 !i113 0
-Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s102 +cover
+Z9 o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vu_rec
 R2
 !i10b 1
-!s100 bo[gLi>@ZFaMIVR2hzlP91
-IK4Uzdh?M8b?@Ve9o1mnkV0
+!s100 JTzc0SS`cFg^k6ZTC4DH02
+IHEJSPkKaWXl1]j?32KlLU2
 R3
 R0
 w1779184610
@@ -58,12 +59,13 @@ R6
 R7
 !i113 0
 R8
+R9
 R1
 vu_xmit
 R2
 !i10b 1
-!s100 o8k=m36_WhEOLLf8NhC733
-I8=hlOFD;Q_nl?SK[zQGJS1
+!s100 i?WM]17[Tl1X?7iPGb?^_2
+Ia<U9Y>GD55;Dm?[OAeQ1c0
 R3
 R0
 w1779184520
@@ -79,15 +81,16 @@ R6
 R7
 !i113 0
 R8
+R9
 R1
 vuart
 R2
 !i10b 1
-!s100 MHfXY4JG<R8MYe3NHCGcb1
-I]`AW;S3e:`857]nTXimfX1
+!s100 zUc`z@dCLnQ6>mV<n]ei@3
+I368R9T><CaE8SbPb?8VJ^0
 R3
 R0
-w1779269423
+w1779322750
 8uart.v
 Fuart.v
 L0 6
@@ -100,25 +103,26 @@ R6
 R7
 !i113 0
 R8
+R9
 R1
 vuart_test
-R2
+!s110 1779322795
 !i10b 1
-!s100 D9E0^nh@IM=;Ei:LDoViU2
-ICf3e^zkY5;^CA?5Jgijd]1
+!s100 ]3UlCRChP7BnFzSg`[iI<2
+IhUIP3KJO<e@HkH]IO0K6@0
 R3
 R0
-w1779269510
+w1779322793
 8tb.v
 Ftb.v
-L0 4
+L0 1
 R4
 r1
 !s85 0
 31
-R5
-R6
-R7
+!s108 1779322795.000000
+!s107 inc.h|tb.v|uart.v|u_xmit.v|u_rec.v|baud.v|
+!s90 baud.v|u_rec.v|u_xmit.v|uart.v|tb.v|inc.h|
 !i113 0
-R8
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1

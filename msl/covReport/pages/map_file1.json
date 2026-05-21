@@ -1,0 +1,11 @@
+var g_data = {'dummy':{null},
+'work.baud':{h:'4',s:1,b:1,t:1,z:1},
+'/uart_test/DUT/b1':{h:'37',s:1,b:1,t:1,z:1},
+'work.u_xmit':{h:'5',s:1,b:1,c:1,f:1,t:1,z:1},
+'/uart_test/DUT/b2':{h:'52',s:1,b:1,c:1,f:1,t:1,z:1},
+'work.u_rec':{h:'6',s:1,b:1,c:1,f:1,t:1,z:1},
+'/uart_test/DUT/b3':{h:'116',s:1,b:1,c:1,f:1,t:1,z:1},
+'work.uart':{h:'3',t:1,z:1},
+'/uart_test/DUT':{h:'8',t:1,z:1},
+'work.uart_test':{h:'2',z:1},
+'/uart_test':{h:'7',z:1}};
