@@ -9,7 +9,7 @@ module TX #(parameter WORD = 8)(
 
     output reg uart_REC_dataH,
     output reg xmit_active,
-    output  reg xmit_doneH
+    output reg xmit_doneH
 );
 
     reg [WORD-1:0] data;
@@ -22,9 +22,9 @@ module TX #(parameter WORD = 8)(
 
 
 
-	always @(posedge baud_clk or negedge sys_rst_l) begin
+    always @(posedge baud_clk or posedge sys_rst_l) begin
 
-        if(!sys_rst_l) begin
+        if(sys_rst_l) begin
             cur   <= idle;
             count <= 0;
             i     <= 0;
@@ -90,6 +90,8 @@ module TX #(parameter WORD = 8)(
         case(cur)
 
             idle: begin
+                xmit_active = 1'b0;
+                xmit_doneH = 1'b1;
                 uart_REC_dataH = 1'b1;
                 if(xmitH)
                     nxt = start_bit;
@@ -100,24 +102,25 @@ module TX #(parameter WORD = 8)(
             start_bit: begin
                 uart_REC_dataH = 1'b0;
                 xmit_active = 1'b1;
+              xmit_doneH  = 1'b0;
                 nxt = (count == 15) ? data_bit : start_bit;
             end
 
             data_bit: begin
                 uart_REC_dataH = data[i];
                 xmit_active = 1'b1;
+              xmit_doneH  = 1'b0;
                 nxt = ((count == 15) && (i == WORD-1)) ?
                        stop_bit : data_bit;
 
             end
 
             stop_bit: begin
-                
                 uart_REC_dataH = 1'b1;
                 xmit_active = 1'b1;
                 if(count == 15) begin
                     nxt = idle;
-                    xmit_doneH = 1'b1;
+                    
                 end
                 else begin
                     nxt = stop_bit;
@@ -127,4 +130,5 @@ module TX #(parameter WORD = 8)(
         endcase
 
     end
+
 endmodule
