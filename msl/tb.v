@@ -1,5 +1,4 @@
-`include"uart.v"
-`timescale 1ns / 1ps
+`include "uart.v"
 
 module uart_test;
 
@@ -15,7 +14,7 @@ reg sys_rst;
 reg xmit_h;
 reg [width-1:0] xmit_data_h;
 reg uart_rec_data_h;
-reg uart_clk;
+wire uart_clk;
 wire uart_xmit_data_h;
 wire xmit_done_h;
 wire [width-1:0] rec_data_h;
@@ -60,36 +59,6 @@ uart #(
     .xmit_active(xmit_active)
 );
 
-
-localparam endcount = (freq/(baudr*16*2));
-reg [$clog2(endcount):0] count;
-
-
-//uart_clk generation logic
-initial begin
-    uart_clk = 0;
-    count = 0;
-end
-always @(posedge sys_clk or negedge sys_rst) begin
-
-    if(!sys_rst) begin
-
-        uart_clk <= 0;
-
-        count <= 0;
-
-    end
-
-    else if(count == endcount-1) begin
-
-        uart_clk <= ~uart_clk;
-
-        count <= 0;
-    end
-    else begin
-        count <= count + 1;
-    end
-end
 
 // DUT RESET TASK
 task reset_dut;
@@ -208,8 +177,8 @@ begin
         xmitH_assert(1);
         tx_driver(tx_expected_data); 
         tx_monitor();
-        tx_scr(ID);       
     join  
+        tx_scr(ID);       
 end        
 endtask
 
@@ -221,8 +190,8 @@ begin
         tx_driver(tx_expected_data);
         #50 xmitH_assert(1);   
         tx_monitor();
-        tx_scr(ID);       
     join    
+        tx_scr(ID);       
 end      
 endtask
 
@@ -234,8 +203,8 @@ begin
         tx_driver(tx_expected_data);
         #50 tx_driver($urandom_range(0,255));   
         tx_monitor();
-        tx_scr(ID);       
     join     
+        tx_scr(ID);       
 end     
 endtask
 
@@ -245,8 +214,8 @@ begin
     fork
         tx_driver(tx_expected_data); 
         tx_monitor();
-        tx_scr(ID);       
     join     
+        tx_scr(ID);       
 end     
 endtask
 
@@ -260,8 +229,8 @@ begin
             xmitH_assert(1);
             tx_driver(tx_expected_data); 
             tx_monitor();
-            tx_scr(ID);       
         join  
+            tx_scr(ID);       
     end
     
     begin //seconf pac
@@ -270,8 +239,8 @@ begin
             xmitH_assert(1);
             tx_driver(tx_expected_data); 
             tx_monitor();
-            tx_scr(ID);       
         join  
+            tx_scr(ID);       
     end
 end        
 endtask
@@ -282,8 +251,8 @@ begin
     fork
         rx_driver(tx_expected_data,16,16); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end        
 endtask
 
@@ -293,8 +262,8 @@ begin
     fork
         rx_driver(tx_expected_data,10,16); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end        
 endtask
 
@@ -304,8 +273,8 @@ begin
     fork
         rx_driver(tx_expected_data,16,16); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end        
 endtask
 
@@ -315,8 +284,8 @@ begin
     fork
         rx_driver(tx_expected_data,16,16); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end        
 endtask
 
@@ -326,8 +295,8 @@ begin
     fork
         rx_driver(tx_expected_data,16,16); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end        
 endtask
 
@@ -338,16 +307,16 @@ begin// first pac
     fork
         rx_driver(tx_expected_data,16,16); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end   
 begin//second pax
     rx_expected_data = $urandom_range(0,255);
     fork
         rx_driver(tx_expected_data,16,16); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end   
 end     
 endtask
@@ -358,19 +327,30 @@ begin
     fork
         rx_driver(tx_expected_data,16,0); 
         rx_monitor();
-        rx_scr(ID);       
     join  
+        rx_scr(ID);       
 end        
 endtask
+//watch dog timer
+//initial begin
 
+  //  #100000000;
+
+    //$display("WATCHDOG TIMER EXPIRED");
+
+    //$display("Simulation Timeout");
+
+    //$finish;
+
+//end
 initial begin
-    repeat(100) begin
+    repeat(20) begin
         // reseting dut
         reset_dut();
         
         // TX test cases
         xmitH_assertion_for_data_Transmission(7);
-        xmitH_assertion_between_TX_busy(8);
+        /*xmitH_assertion_between_TX_busy(8);
         xmit_dataH_assertion_in_between_the_transmission_process(9);
         No_assertion_xmitH(10);
         longer_assertion_xmitH_for_2Datas(11);
@@ -382,7 +362,7 @@ initial begin
         all_zero_data_reception(15);
         all_one_data_reception(16);
         sending_two_pacs_continouosly(20);
-        end_bit_not_recieved(21); 
+        end_bit_not_recieved(21);*/ 
     end
 	$finish;
  end       

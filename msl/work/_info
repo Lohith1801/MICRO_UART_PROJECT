@@ -9,17 +9,16 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT/msl
 T_opt
-!s110 1779267706
-VA82T1F3ILZJ7h@7h`R7zS3
+!s110 1779269544
+VNND=NSoacJE?1^Hlj>5650
 04 9 4 work uart_test fast 0
-=1-6805caf5892e-6a0d787a-1853-e359
+=1-6805caf5892e-6a0d7fa8-72d6f-1678e
 o-quiet -auto_acc_if_foreign -work work
 Z1 tCvgOpt 0
 n@_opt
 OE;O;10.6c;65
-R0
 vbaud
-Z2 !s110 1779267765
+Z2 !s110 1779269524
 !i10b 1
 !s100 h9CMSlA[eg;Iin[Q>U:n=1
 I9`IBW<gIc:CMFzEP;WUGb1
@@ -33,7 +32,7 @@ Z4 OE;L;10.6c;65
 r1
 !s85 0
 31
-Z5 !s108 1779267765.000000
+Z5 !s108 1779269524.000000
 Z6 !s107 inc.h|baud.v|u_xmit.v|u_rec.v|uart.v|tb.v|
 Z7 !s90 tb.v|uart.v|u_rec.v|u_xmit.v|baud.v|inc.h|
 !i113 0
@@ -82,38 +81,37 @@ R7
 R8
 R1
 vuart
-!s110 1779267770
+R2
 !i10b 1
-!s100 2;56ikYA]UH0Vz>I_ZQg;2
-I7OlY52G5z87U_WUl>TQW`2
+!s100 MHfXY4JG<R8MYe3NHCGcb1
+I]`AW;S3e:`857]nTXimfX1
 R3
 R0
-w1779267457
+w1779269423
 8uart.v
 Fuart.v
-L0 3
+L0 6
 R4
 r1
 !s85 0
 31
-!s108 1779267770.000000
-!s107 inc.h|uart.v|
-!s90 +acc|+cover|-l|log_file.log|uart.v|
+R5
+R6
+R7
 !i113 0
-!s102 +cover
-o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
 R1
 vuart_test
 R2
 !i10b 1
-!s100 Kbb52Rb1318M:]]d>IUL>2
-IGZ6S<MY^NHA?I>XmSVdc31
+!s100 D9E0^nh@IM=;Ei:LDoViU2
+ICf3e^zkY5;^CA?5Jgijd]1
 R3
 R0
-w1779267684
+w1779269510
 8tb.v
 Ftb.v
-L0 3
+L0 4
 R4
 r1
 !s85 0
