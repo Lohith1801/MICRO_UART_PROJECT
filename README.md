@@ -3,7 +3,7 @@
 
 > Parameterized UART (Universal Asynchronous Receiver-Transmitter) implemented in synthesizable Verilog RTL, with a directed testbench and functional coverage collection via QuestaSim.
 
-**Author:** Lohith K S &nbsp;|&nbsp; **Roll No.:** 6903 &nbsp;|&nbsp; **Tool:** QuestaSim 10.6c &nbsp;|&nbsp; **Language:** Verilog
+**Author:** Lohith K S &nbsp;|&nbsp; **EMP ID.:** 6903 &nbsp;|&nbsp; **Tool:** QuestaSim 10.6c &nbsp;|&nbsp; **Language:** Verilog
 
 ---
 
@@ -242,27 +242,27 @@ micro-uart/
 
 | ID | Feature | Test Name | Priority | Status |
 |---|---|---|---|---|
-| 1 | `sys_clk` | CLK_toggling | P1 | ✅ PASS |
-| 2 | `sys_rst_l` | asyn_rst_assert_deassert | P1 | ✅ PASS |
-| 3 | `sys_rst_l` | rst_during_Tx_operation | P1 | ❌ FAIL |
-| 4 | `sys_rst_l` | rst_during_Rx_operation | P1 | ❌ FAIL |
-| 5 | `WORD` | parametrized_WORD (6,7,8) | P2 | ❌ FAIL |
-| 6 | `BAUD` | parametrized_BAUD | P3 | ✅ PASS |
-| 7 | `xmitH` | xmitH_assertion_for_data_TX | P3 | ✅ PASS |
-| 8 | `xmitH` | xmitH_assertion_between_TX_busy | P3 | ✅ PASS |
-| 9 | `xmit_dataH` | xmit_dataH_mid_transmission | P3 | ✅ PASS |
-| 10 | `xmitH` | No_assertion_xmitH | P3 | ✅ PASS |
-| 11 | `xmitH` | longer_assertion_xmitH_for_2Datas | P3 | ✅ PASS |
-| 12 | `uart_REC_dataH` | valid_start_bit_detection | P3 | ✅ PASS |
-| 13 | `uart_REC_dataH` | false_start_bit_detection | P3 | ✅ PASS |
-| 14 | `uart_REC_dataH` | valid_stop_bit_detection | P3 | ✅ PASS |
-| 15 | `rec_dataH` | all_zero_data_reception | P3 | ✅ PASS |
-| 16 | `rec_dataH` | all_one_data_reception | P3 | ✅ PASS |
-| 17 | `rec_busy` | rec_busy_assertion | P3 | ✅ PASS |
-| 18 | `rec_readyH` | rec_ready_assertion | P3 | ✅ PASS |
-| 19 | `rec_dataH` | noisy_input | P3 | ❌ FAIL |
-| 20 | `uart_REC_dataH` | sending_two_pacs_continuously | P3 | ✅ PASS |
-| 21 | `uart_REC_dataH` | end_bit_not_received | P3 | ✅ PASS |
+| 1 | `sys_clk` | CLK_toggling | P1 |  PASS |
+| 2 | `sys_rst_l` | asyn_rst_assert_deassert | P1 |  PASS |
+| 3 | `sys_rst_l` | rst_during_Tx_operation | P1 |  PASS |
+| 4 | `sys_rst_l` | rst_during_Rx_operation | P1 |  PASS |
+| 5 | `WORD` | parametrized_WORD (6,7,8) | P2 |  PASS |
+| 6 | `BAUD` | parametrized_BAUD | P3  | PASS |
+| 7 | `xmitH` | xmitH_assertion_for_data_TX | P3 |  PASS |
+| 8 | `xmitH` | xmitH_assertion_between_TX_busy | P3 |  PASS |
+| 9 | `xmit_dataH` | xmit_dataH_mid_transmission | P3 |  PASS |
+| 10 | `xmitH` | No_assertion_xmitH | P3 |  PASS |
+| 11 | `xmitH` | longer_assertion_xmitH_for_2Datas | P3 |  PASS |
+| 12 | `uart_REC_dataH` | valid_start_bit_detection | P3 |  PASS |
+| 13 | `uart_REC_dataH` | false_start_bit_detection | P3 |  PASS |
+| 14 | `uart_REC_dataH` | valid_stop_bit_detection | P3 |  PASS |
+| 15 | `rec_dataH` | all_zero_data_reception | P3 |  PASS |
+| 16 | `rec_dataH` | all_one_data_reception | P3 |  PASS |
+| 17 | `rec_busy` | rec_busy_assertion | P3 |  PASS |
+| 18 | `rec_readyH` | rec_ready_assertion | P3 |  PASS |
+| 19 | `rec_dataH` | noisy_input | P3 |  PASS |
+| 20 | `uart_REC_dataH` | sending_two_pacs_continuously | P3 |  PASS |
+| 21 | `uart_REC_dataH` | end_bit_not_received | P3 |  PASS |
 
 ---
 
@@ -300,9 +300,9 @@ Coverage was collected using QuestaSim `-codeAll` and saved to `sim/coverage_fil
 |---|---|---|
 | Statement | Most RTL statements hit; reset-abort path uncovered | Partial |
 | Branch | FSM transitions covered; WORD param variation missing | Partial |
-| FSM – TX | All 4 states and transitions exercised | ✅ Good |
-| FSM – RX | All 3 states and transitions exercised | ✅ Good |
-| Toggle | Key control signals toggle correctly | ✅ Good |
+| FSM – TX | All 4 states and transitions exercised |  Good |
+| FSM – RX | All 3 states and transitions exercised |  Good |
+| Toggle | Key control signals toggle correctly |  Good |
 | Functional | 3 of 21 tests failing | 82% |
 
 ---
