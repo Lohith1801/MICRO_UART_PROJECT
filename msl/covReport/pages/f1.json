@@ -2,35 +2,35 @@ var g_data = {
 f5:{
 scopes:[{link:'z.htm?f=0&s=5',val:'work.u_xmit'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg72',items:[{c:'Y',p:'83.33',z:'ct'}
-,{cr:'c',s:'1',z:'idle',h:'340',c:'g'}
-,{cr:'c',z:'idle -> start',h:'100',c:'g'}
-,{cr:'c',s:'1',z:'start',h:'1600',c:'g'}
-,{cr:'c',z:'start -> data',h:'100',c:'g'}
-,{cr:'m',z:'start -> idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'data',h:'12800',c:'g'}
-,{cr:'c',z:'data -> stop',h:'100',c:'g'}
+,{anchor:'cvg71',items:[{c:'G',p:'91.66',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'23',c:'g'}
+,{cr:'c',z:'idle -> start',h:'6',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'83',c:'g'}
+,{cr:'c',z:'start -> data',h:'5',c:'g'}
+,{cr:'c',z:'start -> idle',h:'1',c:'g'}
+,{cr:'c',s:'1',z:'data',h:'640',c:'g'}
+,{cr:'c',z:'data -> stop',h:'5',c:'g'}
 ,{cr:'m',z:'data -> idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'stop',h:'1600',c:'g'}
-,{cr:'c',z:'stop -> idle',h:'100',c:'g'}
+,{cr:'c',s:'1',z:'stop',h:'80',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'5',c:'g'}
 ]}
 
 ],
 },
-f52:{
-scopes:[{s:'7',b:'1',val:'uart_test'},{s:'8',b:'1',val:'DUT'},{link:'z.htm?f=0&s=52',val:'b2'}]
+f51:{
+scopes:[{s:'7',b:'1',val:'uart_test'},{s:'8',b:'1',val:'DUT'},{link:'z.htm?f=0&s=51',val:'b2'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg72',items:[{c:'Y',p:'83.33',z:'ct'}
-,{cr:'c',s:'1',z:'idle',h:'340',c:'g'}
-,{cr:'c',z:'idle -> start',h:'100',c:'g'}
-,{cr:'c',s:'1',z:'start',h:'1600',c:'g'}
-,{cr:'c',z:'start -> data',h:'100',c:'g'}
-,{cr:'m',z:'start -> idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'data',h:'12800',c:'g'}
-,{cr:'c',z:'data -> stop',h:'100',c:'g'}
+,{anchor:'cvg71',items:[{c:'G',p:'91.66',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'23',c:'g'}
+,{cr:'c',z:'idle -> start',h:'6',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'83',c:'g'}
+,{cr:'c',z:'start -> data',h:'5',c:'g'}
+,{cr:'c',z:'start -> idle',h:'1',c:'g'}
+,{cr:'c',s:'1',z:'data',h:'640',c:'g'}
+,{cr:'c',z:'data -> stop',h:'5',c:'g'}
 ,{cr:'m',z:'data -> idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'stop',h:'1600',c:'g'}
-,{cr:'c',z:'stop -> idle',h:'100',c:'g'}
+,{cr:'c',s:'1',z:'stop',h:'80',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'5',c:'g'}
 ]}
 
 ],
@@ -38,35 +38,35 @@ scopes:[{s:'7',b:'1',val:'uart_test'},{s:'8',b:'1',val:'DUT'},{link:'z.htm?f=0&s
 f6:{
 scopes:[{link:'z.htm?f=0&s=6',val:'work.u_rec'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg139',items:[{c:'Y',p:'83.33',z:'ct'}
-,{cr:'c',s:'1',z:'idle',h:'24300',c:'g'}
-,{cr:'c',z:'idle -> start',h:'160',c:'g'}
-,{cr:'c',s:'1',z:'start',h:'1280',c:'g'}
-,{cr:'m',z:'start -> idle',h:'0',c:'r'}
-,{cr:'c',z:'start -> data',h:'160',c:'g'}
-,{cr:'c',s:'1',z:'data',h:'20320',c:'g'}
-,{cr:'c',z:'data -> stop',h:'160',c:'g'}
+,{anchor:'cvg137',items:[{c:'G',p:'91.66',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'1428',c:'g'}
+,{cr:'c',z:'idle -> start',h:'11',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'84',c:'g'}
+,{cr:'c',z:'start -> idle',h:'1',c:'g'}
+,{cr:'c',z:'start -> data',h:'10',c:'g'}
+,{cr:'c',s:'1',z:'data',h:'1270',c:'g'}
+,{cr:'c',z:'data -> stop',h:'10',c:'g'}
 ,{cr:'m',z:'data -> idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'stop',h:'2560',c:'g'}
-,{cr:'c',z:'stop -> idle',h:'160',c:'g'}
+,{cr:'c',s:'1',z:'stop',h:'160',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'10',c:'g'}
 ]}
 
 ],
 },
-f116:{
-scopes:[{s:'7',b:'1',val:'uart_test'},{s:'8',b:'1',val:'DUT'},{link:'z.htm?f=0&s=116',val:'b3'}]
+f114:{
+scopes:[{s:'7',b:'1',val:'uart_test'},{s:'8',b:'1',val:'DUT'},{link:'z.htm?f=0&s=114',val:'b3'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg139',items:[{c:'Y',p:'83.33',z:'ct'}
-,{cr:'c',s:'1',z:'idle',h:'24300',c:'g'}
-,{cr:'c',z:'idle -> start',h:'160',c:'g'}
-,{cr:'c',s:'1',z:'start',h:'1280',c:'g'}
-,{cr:'m',z:'start -> idle',h:'0',c:'r'}
-,{cr:'c',z:'start -> data',h:'160',c:'g'}
-,{cr:'c',s:'1',z:'data',h:'20320',c:'g'}
-,{cr:'c',z:'data -> stop',h:'160',c:'g'}
+,{anchor:'cvg137',items:[{c:'G',p:'91.66',z:'ct'}
+,{cr:'c',s:'1',z:'idle',h:'1428',c:'g'}
+,{cr:'c',z:'idle -> start',h:'11',c:'g'}
+,{cr:'c',s:'1',z:'start',h:'84',c:'g'}
+,{cr:'c',z:'start -> idle',h:'1',c:'g'}
+,{cr:'c',z:'start -> data',h:'10',c:'g'}
+,{cr:'c',s:'1',z:'data',h:'1270',c:'g'}
+,{cr:'c',z:'data -> stop',h:'10',c:'g'}
 ,{cr:'m',z:'data -> idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'stop',h:'2560',c:'g'}
-,{cr:'c',z:'stop -> idle',h:'160',c:'g'}
+,{cr:'c',s:'1',z:'stop',h:'160',c:'g'}
+,{cr:'c',z:'stop -> idle',h:'10',c:'g'}
 ]}
 
 ],

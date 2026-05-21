@@ -7,122 +7,113 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT/msl
-T_opt
-!s110 1779322873
-Vf=mPR@[@oT78`<]c0coLn3
-04 9 4 work uart_test fast 0
-=1-6805caf5892e-6a0e4ff9-a5f0b-2d9e1
-o-quiet -auto_acc_if_foreign -work work
-Z1 tCvgOpt 0
-n@_opt
-OE;O;10.6c;65
-vbaud
-Z2 !s110 1779322842
+Z0 d/fetools/work_area/frontend/Batch_11/LohithKS/MICRO_UART_PROJECT
+vBaud
+Z1 !s110 1779260968
 !i10b 1
-!s100 zPh48JdO1J`0P_f8M3Y]n1
-I;c=O=^3;b7:Ik2?TF?jb30
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 2UN3TJT1zd09a?h::4_Um0
+I<od=MaW`<[K3_ljYC]<Y^2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1779259917
-8baud.v
-Fbaud.v
-L0 3
-Z4 OE;L;10.6c;65
-r1
-!s85 0
-31
-Z5 !s108 1779322842.000000
-Z6 !s107 u_xmit.v|u_rec.v|baud.v|inc.h|uart.v|
-Z7 !s90 +acc|+cover|-l|log_file.log|uart.v|
-!i113 0
-Z8 !s102 +cover
-Z9 o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
-vu_rec
-R2
-!i10b 1
-!s100 JTzc0SS`cFg^k6ZTC4DH02
-IHEJSPkKaWXl1]j?32KlLU2
-R3
-R0
-w1779184610
-8u_rec.v
-Fu_rec.v
-L0 3
-R4
-r1
-!s85 0
-31
-R5
-R6
-R7
-!i113 0
-R8
-R9
-R1
-vu_xmit
-R2
-!i10b 1
-!s100 i?WM]17[Tl1X?7iPGb?^_2
-Ia<U9Y>GD55;Dm?[OAeQ1c0
-R3
-R0
-w1779184520
-8u_xmit.v
-Fu_xmit.v
-L0 3
-R4
-r1
-!s85 0
-31
-R5
-R6
-R7
-!i113 0
-R8
-R9
-R1
-vuart
-R2
-!i10b 1
-!s100 zUc`z@dCLnQ6>mV<n]ei@3
-I368R9T><CaE8SbPb?8VJ^0
-R3
-R0
-w1779322750
-8uart.v
-Fuart.v
-L0 6
-R4
-r1
-!s85 0
-31
-R5
-R6
-R7
-!i113 0
-R8
-R9
-R1
-vuart_test
-!s110 1779322795
-!i10b 1
-!s100 ]3UlCRChP7BnFzSg`[iI<2
-IhUIP3KJO<e@HkH]IO0K6@0
-R3
-R0
-w1779322793
-8tb.v
-Ftb.v
+w1779183514
+8Baud.v
+FBaud.v
 L0 1
-R4
+Z3 OE;L;10.6c;65
 r1
 !s85 0
 31
-!s108 1779322795.000000
-!s107 inc.h|tb.v|uart.v|u_xmit.v|u_rec.v|baud.v|
-!s90 baud.v|u_rec.v|u_xmit.v|uart.v|tb.v|inc.h|
+Z4 !s108 1779260967.000000
+!s107 micro_UART.v|Baud.v|TX.v|Sync.v|RX.v|
+Z5 !s90 RX.v|Sync.v|TX.v|Baud.v|micro_UART.v|
 !i113 0
-o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@baud
+vRX
 R1
+!i10b 1
+!s100 ;_fBTlaFKRSVef>R>=neb1
+IY>aa3mobSEiQ9NgPm]>2M0
+R2
+R0
+w1779260965
+8RX.v
+FRX.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+Z8 !s107 micro_UART.v|Baud.v|TX.v|Sync.v|RX.v|
+R5
+!i113 0
+R6
+R7
+n@r@x
+vsync
+R1
+!i10b 1
+!s100 aF`dRSG:KI18JX@1<kBH<3
+IgLQkEgIXZbVzF`z7QG[EI3
+R2
+R0
+w1779171622
+8Sync.v
+FSync.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R8
+R5
+!i113 0
+R6
+R7
+vTX
+R1
+!i10b 1
+!s100 8NOQomME<o5Hk1PJeo:a?1
+IePzl2G7mW[eiOE<6do:M01
+R2
+R0
+w1779260501
+8TX.v
+FTX.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R8
+R5
+!i113 0
+R6
+R7
+n@t@x
+vUART_LOOPBACK
+R1
+!i10b 1
+!s100 Wf_=Yc?;4O3I6=6Qo8c<]0
+I@NI9TV3IMo;^a5mcW3H?i0
+R2
+R0
+w1779260907
+8micro_UART.v
+Fmicro_UART.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R8
+R5
+!i113 0
+R6
+R7
+n@u@a@r@t_@l@o@o@p@b@a@c@k

@@ -191,6 +191,24 @@ begin
     tx_scr(ID);
 end
 endtask
+  
+  task rst_during_Tx_operation(input reg [6:0]ID);
+begin
+  tx_expected_data = {width{1'b0}};
+    fork
+        begin
+            fork
+                xmitH_assert(2); 
+              tx_driver($urandom_range(0,255),12);
+              #(4*BIT_PERIOD) reset_dut();
+            join
+            wait(!xmit_active); 
+        end
+        tx_monitor();
+    join
+    tx_scr(ID);
+end
+endtask
 
 task xmitH_assertion_between_TX_busy(input reg [6:0]ID);
 begin
@@ -214,17 +232,17 @@ endtask
 
 task xmit_dataH_assertion_in_between_the_transmission_process(input reg [6:0]ID);
 begin
-    tx_expected_data = $urandom_range(0,255);
+  tx_expected_data = $urandom_range(0,255);
     fork
         begin
             fork
                 xmitH_assert(1);
-              tx_driver(tx_expected_data,5);
+              tx_driver(tx_expected_data,2);
             join
             wait(!xmit_active);
         end
         begin
-          #(UART_CC * 4) tx_driver($urandom_range(0,255),12);
+          #(BIT_PERIOD * 2) tx_driver($urandom_range(0,255),12);
         end
         tx_monitor();
     join
@@ -294,6 +312,18 @@ begin
 end
 endtask
 
+  task rst_during_Rx_operation(input reg [6:0]ID);
+fork
+begin
+  rx_expected_data = {width{1'b0}};
+  rx_driver($urandom_range(0,255),16,16); 
+   	rx_monitor();
+    rx_scr(ID);
+end
+  #(BIT_PERIOD*4) reset_dut();
+join
+endtask
+  
 task false_start_bit_detection(input reg [6:0]ID);
 begin
     rx_expected_data = $urandom_range(0,255);
@@ -369,17 +399,47 @@ begin
     rx_scr(ID);
 end
 endtask
+  
 
 // Main Initial Block
 initial begin
     pass_count = 0;
     fail_count = 0;
     
+  repeat(1) begin // noisy input test case
+    reset_dut();
+    @(posedge sys_clk);
+    rx_expected_data = 8'b00000000;
+    uart_rec_data_h = 0;// start bit
+    #(BIT_PERIOD);
+    uart_rec_data_h = 0;//data_bit
+    #(BIT_PERIOD - 2*UART_CC);
+    uart_rec_data_h = 0;
+    #(BIT_PERIOD);
+    uart_rec_data_h = 0;
+    #(BIT_PERIOD);
+    uart_rec_data_h = 0;
+    #(BIT_PERIOD);
+    uart_rec_data_h = 0;
+    #(BIT_PERIOD);
+    uart_rec_data_h = 0;
+    #(BIT_PERIOD);
+    uart_rec_data_h = 0;
+    #(BIT_PERIOD);
+    uart_rec_data_h = 0;
+    #(BIT_PERIOD);
+    uart_rec_data_h = 1;
+    #(BIT_PERIOD);
     
-  repeat(20) begin
+    rx_monitor();
+    rx_scr(19);
+  end
+    
+  repeat(1) begin
         reset_dut();
 
         //  Tx testcases
+    rst_during_Tx_operation(3);
         xmitH_assertion_for_data_Transmission(7);
         xmitH_assertion_between_TX_busy(8);
          xmit_dataH_assertion_in_between_the_transmission_process(9);
@@ -387,6 +447,7 @@ initial begin
          longer_assertion_xmitH_for_2Datas(11);
 
         //Rx testcases
+    rst_during_Rx_operation(4);
          valid_start_bit_detection(12);
          false_start_bit_detection(13);
          valid_stop_bit_detection(14);
@@ -395,6 +456,7 @@ initial begin
          sending_two_pacs_continouosly(20);
          end_bit_not_recieved(21);
     end
+  
   pass_percentage = (pass_count*100) / (pass_count + fail_count);
     
     $display("\n=================================================");
@@ -404,7 +466,7 @@ initial begin
     $display(" Total Pass: %0d", pass_count);
     $display(" Total Fail:  %0d", fail_count);
   
-  $display(" PASS percentage:  %0.2f percentage", pass_percentage);
+  $display(" PASS percentage:  %0.2f ", pass_percentage);
     $display("=================================================\n");
     $finish;
 end

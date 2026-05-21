@@ -1,6 +1,6 @@
 # vsim work.uart_test -l log_file.log -coverage -c -do "coverage save -onexit -codeAll coverage_file.ucdb; run -all; exit" 
-# Start time: 05:51:13 on May 21,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 08:15:14 on May 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "u_rec(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "u_xmit(fast)".
 # //  Questa Sim
@@ -24,298 +24,35 @@
 # Loading work.u_rec(fast)
 # coverage save -onexit -codeAll coverage_file.ucdb
 #  run -all
-# PASS => TX Test ID - 7 | Matched Data: e7
-# PASS => TX Test ID - 8 | Matched Data: 9c
-# FAIL => TX Test ID - 9 | Expected: e8, Sampled: fd
-# PASS => TX Test ID - 10 | Matched Data: fd
-# PASS => TX Test ID - 11 | Matched Data: dd
-# PASS => TX Test ID - 11 | Matched Data: e8
-# PASS => RX Test ID - 12 | Matched Data: 00
-# PASS => RX Test ID - 13 | Matched Data: 59
-# PASS => RX Test ID - 14 | Matched Data: f8
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: fb
-# PASS => RX Test ID - 20 | Matched Data: 11
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: a2
-# PASS => TX Test ID - 8 | Matched Data: a5
-# FAIL => TX Test ID - 9 | Expected: 96, Sampled: 73
-# PASS => TX Test ID - 10 | Matched Data: 73
-# PASS => TX Test ID - 11 | Matched Data: 43
-# PASS => TX Test ID - 11 | Matched Data: d4
-# PASS => RX Test ID - 12 | Matched Data: 83
-# PASS => RX Test ID - 13 | Matched Data: 86
-# PASS => RX Test ID - 14 | Matched Data: 14
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: cd
-# PASS => RX Test ID - 20 | Matched Data: 5c
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: 4f
-# PASS => TX Test ID - 8 | Matched Data: 97
-# FAIL => TX Test ID - 9 | Expected: 1e, Sampled: cd
-# PASS => TX Test ID - 10 | Matched Data: cd
-# PASS => TX Test ID - 11 | Matched Data: 44
-# PASS => TX Test ID - 11 | Matched Data: f0
-# PASS => RX Test ID - 12 | Matched Data: 9e
-# PASS => RX Test ID - 13 | Matched Data: 85
-# PASS => RX Test ID - 14 | Matched Data: b2
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 9b
-# PASS => RX Test ID - 20 | Matched Data: 52
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: ad
-# PASS => TX Test ID - 8 | Matched Data: 18
-# FAIL => TX Test ID - 9 | Expected: c0, Sampled: 95
-# PASS => TX Test ID - 10 | Matched Data: 95
-# PASS => TX Test ID - 11 | Matched Data: 9e
-# PASS => TX Test ID - 11 | Matched Data: 5d
-# PASS => RX Test ID - 12 | Matched Data: 88
-# PASS => RX Test ID - 13 | Matched Data: 2f
-# PASS => RX Test ID - 14 | Matched Data: 35
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 14
-# PASS => RX Test ID - 20 | Matched Data: 0f
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: 11
-# PASS => TX Test ID - 8 | Matched Data: 48
-# FAIL => TX Test ID - 9 | Expected: 1d, Sampled: 12
-# PASS => TX Test ID - 10 | Matched Data: 12
-# PASS => TX Test ID - 11 | Matched Data: 65
-# PASS => TX Test ID - 11 | Matched Data: 78
-# PASS => RX Test ID - 12 | Matched Data: 82
-# PASS => RX Test ID - 13 | Matched Data: 82
-# PASS => RX Test ID - 14 | Matched Data: 71
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: c1
-# PASS => RX Test ID - 20 | Matched Data: 15
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: 53
-# PASS => TX Test ID - 8 | Matched Data: 8f
-# FAIL => TX Test ID - 9 | Expected: 5e, Sampled: 4e
-# PASS => TX Test ID - 10 | Matched Data: 4e
-# PASS => TX Test ID - 11 | Matched Data: 8c
-# PASS => TX Test ID - 11 | Matched Data: f6
-# PASS => RX Test ID - 12 | Matched Data: 7a
-# PASS => RX Test ID - 13 | Matched Data: 18
-# PASS => RX Test ID - 14 | Matched Data: 81
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: b8
-# PASS => RX Test ID - 20 | Matched Data: 81
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: e1
-# PASS => TX Test ID - 8 | Matched Data: a2
-# FAIL => TX Test ID - 9 | Expected: 0d, Sampled: 27
-# PASS => TX Test ID - 10 | Matched Data: 27
-# PASS => TX Test ID - 11 | Matched Data: 65
-# PASS => TX Test ID - 11 | Matched Data: c7
-# PASS => RX Test ID - 12 | Matched Data: c1
-# PASS => RX Test ID - 13 | Matched Data: 4d
-# PASS => RX Test ID - 14 | Matched Data: 1a
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 75
-# PASS => RX Test ID - 20 | Matched Data: c9
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: d6
-# PASS => TX Test ID - 8 | Matched Data: 01
-# FAIL => TX Test ID - 9 | Expected: 89, Sampled: bb
-# PASS => TX Test ID - 10 | Matched Data: bb
-# PASS => TX Test ID - 11 | Matched Data: b7
-# PASS => TX Test ID - 11 | Matched Data: 16
-# PASS => RX Test ID - 12 | Matched Data: 0f
-# PASS => RX Test ID - 13 | Matched Data: a5
-# PASS => RX Test ID - 14 | Matched Data: d4
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 3f
-# PASS => RX Test ID - 20 | Matched Data: a3
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: 7e
-# PASS => TX Test ID - 8 | Matched Data: 7d
-# FAIL => TX Test ID - 9 | Expected: 18, Sampled: f1
-# PASS => TX Test ID - 10 | Matched Data: f1
-# PASS => TX Test ID - 11 | Matched Data: 50
-# PASS => TX Test ID - 11 | Matched Data: d8
-# PASS => RX Test ID - 12 | Matched Data: 33
-# PASS => RX Test ID - 13 | Matched Data: 13
-# PASS => RX Test ID - 14 | Matched Data: fc
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 71
-# PASS => RX Test ID - 20 | Matched Data: bd
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: 82
-# PASS => TX Test ID - 8 | Matched Data: 29
-# FAIL => TX Test ID - 9 | Expected: 5e, Sampled: 34
-# PASS => TX Test ID - 10 | Matched Data: 34
-# PASS => TX Test ID - 11 | Matched Data: 64
-# PASS => TX Test ID - 11 | Matched Data: f5
-# PASS => RX Test ID - 12 | Matched Data: a8
-# PASS => RX Test ID - 13 | Matched Data: 7d
-# PASS => RX Test ID - 14 | Matched Data: 74
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: a8
-# PASS => RX Test ID - 20 | Matched Data: 4a
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: af
-# PASS => TX Test ID - 8 | Matched Data: 4d
-# FAIL => TX Test ID - 9 | Expected: 1e, Sampled: a0
-# PASS => TX Test ID - 10 | Matched Data: a0
-# PASS => TX Test ID - 11 | Matched Data: 21
-# PASS => TX Test ID - 11 | Matched Data: fd
-# PASS => RX Test ID - 12 | Matched Data: 25
-# PASS => RX Test ID - 13 | Matched Data: 6a
-# PASS => RX Test ID - 14 | Matched Data: 49
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: ce
-# PASS => RX Test ID - 20 | Matched Data: 00
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: 33
-# PASS => TX Test ID - 8 | Matched Data: fe
-# FAIL => TX Test ID - 9 | Expected: bb, Sampled: 28
-# PASS => TX Test ID - 10 | Matched Data: 28
-# PASS => TX Test ID - 11 | Matched Data: d1
-# PASS => TX Test ID - 11 | Matched Data: d0
-# PASS => RX Test ID - 12 | Matched Data: 3b
-# PASS => RX Test ID - 13 | Matched Data: ed
-# PASS => RX Test ID - 14 | Matched Data: 08
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 79
-# PASS => RX Test ID - 20 | Matched Data: 21
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: c4
-# PASS => TX Test ID - 8 | Matched Data: ac
-# FAIL => TX Test ID - 9 | Expected: b2, Sampled: b0
-# PASS => TX Test ID - 10 | Matched Data: b0
-# PASS => TX Test ID - 11 | Matched Data: f4
-# PASS => TX Test ID - 11 | Matched Data: 8d
-# PASS => RX Test ID - 12 | Matched Data: 03
-# PASS => RX Test ID - 13 | Matched Data: d6
-# PASS => RX Test ID - 14 | Matched Data: b5
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 45
-# PASS => RX Test ID - 20 | Matched Data: fc
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: e9
-# PASS => TX Test ID - 8 | Matched Data: ff
-# FAIL => TX Test ID - 9 | Expected: bd, Sampled: e2
-# PASS => TX Test ID - 10 | Matched Data: e2
-# PASS => TX Test ID - 11 | Matched Data: 18
-# PASS => TX Test ID - 11 | Matched Data: d1
-# PASS => RX Test ID - 12 | Matched Data: d9
-# PASS => RX Test ID - 13 | Matched Data: d2
-# PASS => RX Test ID - 14 | Matched Data: 2d
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 85
-# PASS => RX Test ID - 20 | Matched Data: 4f
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: f8
-# PASS => TX Test ID - 8 | Matched Data: c4
-# FAIL => TX Test ID - 9 | Expected: 78, Sampled: a5
-# PASS => TX Test ID - 10 | Matched Data: a5
-# PASS => TX Test ID - 11 | Matched Data: ab
-# PASS => TX Test ID - 11 | Matched Data: 46
-# PASS => RX Test ID - 12 | Matched Data: 59
-# PASS => RX Test ID - 13 | Matched Data: 80
-# PASS => RX Test ID - 14 | Matched Data: cb
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 05
-# PASS => RX Test ID - 20 | Matched Data: 55
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: e0
-# PASS => TX Test ID - 8 | Matched Data: fd
-# FAIL => TX Test ID - 9 | Expected: 2c, Sampled: c8
-# PASS => TX Test ID - 10 | Matched Data: c8
-# PASS => TX Test ID - 11 | Matched Data: f9
-# PASS => TX Test ID - 11 | Matched Data: 1e
-# PASS => RX Test ID - 12 | Matched Data: 4b
-# PASS => RX Test ID - 13 | Matched Data: 7c
-# PASS => RX Test ID - 14 | Matched Data: b2
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 63
-# PASS => RX Test ID - 20 | Matched Data: e5
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: 47
-# PASS => TX Test ID - 8 | Matched Data: 80
-# FAIL => TX Test ID - 9 | Expected: 3e, Sampled: 3b
-# PASS => TX Test ID - 10 | Matched Data: 3b
-# PASS => TX Test ID - 11 | Matched Data: 02
-# PASS => TX Test ID - 11 | Matched Data: 2c
-# PASS => RX Test ID - 12 | Matched Data: 91
-# PASS => RX Test ID - 13 | Matched Data: 20
-# PASS => RX Test ID - 14 | Matched Data: 95
+# FAIL => RX Test ID - 19 | Expected: 00, Sampled: ff
+# FAIL => TX Test ID - 3 | Expected: 00, Sampled: ff
+# PASS => TX Test ID - 7 | Matched Data: 7c
+# PASS => TX Test ID - 8 | Matched Data: 1c
+# PASS => TX Test ID - 9 | Matched Data: a7
+# PASS => TX Test ID - 10 | Matched Data: a7
+# PASS => TX Test ID - 11 | Matched Data: df
+# PASS => TX Test ID - 11 | Matched Data: 6d
+# FAIL => RX Test ID - 4 | Expected: 00, Sampled: c1
+# PASS => RX Test ID - 12 | Matched Data: f8
+# PASS => RX Test ID - 13 | Matched Data: fb
+# PASS => RX Test ID - 14 | Matched Data: 11
 # PASS => RX Test ID - 15 | Matched Data: 00
 # PASS => RX Test ID - 16 | Matched Data: ff
 # PASS => RX Test ID - 20 | Matched Data: a2
-# PASS => RX Test ID - 20 | Matched Data: 91
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: ed
-# PASS => TX Test ID - 8 | Matched Data: ef
-# FAIL => TX Test ID - 9 | Expected: 5f, Sampled: 19
-# PASS => TX Test ID - 10 | Matched Data: 19
-# PASS => TX Test ID - 11 | Matched Data: c9
-# PASS => TX Test ID - 11 | Matched Data: fe
-# PASS => RX Test ID - 12 | Matched Data: 28
-# PASS => RX Test ID - 13 | Matched Data: bc
-# PASS => RX Test ID - 14 | Matched Data: fc
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: e1
-# PASS => RX Test ID - 20 | Matched Data: 5f
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: ba
-# PASS => TX Test ID - 8 | Matched Data: fd
-# FAIL => TX Test ID - 9 | Expected: 39, Sampled: 42
-# PASS => TX Test ID - 10 | Matched Data: 42
-# PASS => TX Test ID - 11 | Matched Data: 66
-# PASS => TX Test ID - 11 | Matched Data: 03
-# PASS => RX Test ID - 12 | Matched Data: 1a
-# PASS => RX Test ID - 13 | Matched Data: af
-# PASS => RX Test ID - 14 | Matched Data: e0
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 59
-# PASS => RX Test ID - 20 | Matched Data: 64
-# PASS => RX Test ID - 21 | Matched Data: ff
-# PASS => TX Test ID - 7 | Matched Data: b1
-# PASS => TX Test ID - 8 | Matched Data: 73
-# FAIL => TX Test ID - 9 | Expected: b8, Sampled: 96
-# PASS => TX Test ID - 10 | Matched Data: 96
-# PASS => TX Test ID - 11 | Matched Data: 7f
-# PASS => TX Test ID - 11 | Matched Data: 6c
-# PASS => RX Test ID - 12 | Matched Data: fc
-# PASS => RX Test ID - 13 | Matched Data: 83
-# PASS => RX Test ID - 14 | Matched Data: 77
-# PASS => RX Test ID - 15 | Matched Data: 00
-# PASS => RX Test ID - 16 | Matched Data: ff
-# PASS => RX Test ID - 20 | Matched Data: 02
-# PASS => RX Test ID - 20 | Matched Data: 02
+# PASS => RX Test ID - 20 | Matched Data: fc
 # PASS => RX Test ID - 21 | Matched Data: ff
 # 
 # =================================================
 #                SIMULATION REPORT                 
 # =================================================
-#  Total testcases:  280
-#  Total Pass: 260
-#  Total Fail:  20
-#  PASS percentage:  92.00 percentage
+#  Total testcases:  17
+#  Total Pass: 14
+#  Total Fail:  3
+#  PASS percentage:  82.00 
 # =================================================
 # 
-# ** Note: $finish    : tb.v(409)
-#    Time: 313884002 ns  Iteration: 0  Instance: /uart_test
+# ** Note: $finish    : tb.v(471)
+#    Time: 19036642 ns  Iteration: 0  Instance: /uart_test
 # Saving coverage database on exit...
-# End time: 05:51:30 on May 21,2026, Elapsed time: 0:00:17
+# End time: 08:15:16 on May 21,2026, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
